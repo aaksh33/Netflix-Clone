@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+.header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(218.75rem, 50rem);
+    /* 3500px / 16 = 218.75rem, 800px / 16 = 50rem */
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+    height: 10vh;
+    padding: 0 10%;
+}
+
+.logo {
+    width: 11.5rem;
+    /* 150px / 16 = 9.375rem */
+    margin-top: 1.25rem;
+    /* 20px / 16 = 1.25rem */
+    cursor: pointer;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.box1 {
+    padding: 0 1.875rem;
+    /* 30px / 16 = 1.875rem */
+    height: calc(100% - 6.25rem);
+    /* 100px / 16 = 6.25rem */
+    display: flex;
+    padding: 2.125rem;
+    /* 34px / 16 = 2.125rem */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-family: "Netflix Sans";
+    gap: 1.43rem;
+    /* 23px / 16 = 1.43rem */
+    color: white;
+}
+
+.box1 .h0 {
+    font-size: 3rem;
+    /* 64px / 16 = 4rem */
+    font-weight: 600;
+    text-align: center;
+}
+
+.box1 :nth-child(2) {
+    font-size: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+    font-weight: 400;
+}
+
+.box1 :nth-child(3) {
+    font-weight: 400;
+    font-size: 1.4rem;
+    /* 22.4px / 16 = 1.4rem */
+}
+
+.sepration {
+    height: 0.43rem;
+    /* 7px / 16 = 0.43rem */
+    background-color: rgb(49, 48, 48);
+    display: flex;
+    width: 100vw;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.btn {
+    margin: 0.99rem;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.31rem 3.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-top: 0.1rem;
+    /* slight margin for the dropdown */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+.btn-red-sn {
+    color: white;
+    border-radius: 4px;
+    /* 4px / 16 = 0.25rem */
+    padding: 0.31rem;
+    /* 5px / 16 = 0.31rem */
+    width: 5rem;
+    /* 80px / 16 = 5rem */
+    background-color: rgb(250, 4, 4);
+    border-color: red(250, 4, 4);
+}
+
+.btn-red-sn:hover {
+    color: white;
+    border-radius: 0.25rem;
+    /* 4px / 16 = 0.25rem */
+    padding: 0.25rem;
+    /* 4px / 16 = 0.25rem */
+    width: 5rem;
+    /* 80px / 16 = 5rem */
+    background-color: rgb(222, 5, 5);
+    border-color: red(250, 4, 4);
+}
+
+.btn-red {
+    color: white;
+    font-size: 1.25rem;
+    /* 20px / 16 = 1.25rem */
+    border-radius: 0.26rem;
+    /* 4px / 16 = 0.26rem */
+    padding: 0.43rem 3rem;
+    /* 7px / 16 = 0.43rem, 48px / 16 = 3rem */
+    background-color: rgb(250, 4, 4);
+    font-weight: 400;
+    width: 14.97rem;
+    /* 239px / 16 = 14.97rem */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-red:hover {
+    background-color: rgb(222, 5, 5);
+}
+
+.Sign-button {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    /* 12px / 16 = 0.75rem */
+    height: 3.43rem;
+    /* 55px / 16 = 3.43rem */
+}
+
+.Sign-button input {
+    color: white;
+    border-radius: 0.26rem;
+    /* 4px / 16 = 0.26rem */
+    border: 1px solid rgb(88, 87, 87);
+    cursor: pointer;
+    background: rgba(14, 14, 14, 0.7);
+    width: 30.75rem;
+    /* 380px / 16 = 23.75rem */
+    text-align: left;
+    padding-left: 0.99rem;
+    /* 16px / 16 = 0.99rem */
+    font-weight: 400;
+    font-size: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+}
+
+input::placeholder {
+    color: #c3c0c0;
+    text-overflow: hidden;
+    font-size: large;
+}
+
+.first {
+    max-width: 100vw;
+    height: 31.25rem;
+    /* 500px / 16 = 31.25rem */
+    padding: 2.125rem 0;
+    margin: auto 7.5rem;
+    /* 120px / 16 = 7.5rem */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.first span {
+    font-size: 1.5625rem;
+    /* 25px / 16 = 1.5625rem */
+    font-weight: 350;
+}
+
+.first .h1 {
+    display: flex;
+    font-size: 3.125rem;
+    /* 50px / 16 = 3.125rem */
+    font-weight: bolder;
+    line-height: 5.625rem;
+    /* 90px / 16 = 5.625rem */
+}
+
+.first .h2 {
+    font-size: 3.125rem;
+    /* 50px / 16 = 3.125rem */
+    font-weight: bolder;
+    line-height: 5.625rem;
+    /* 90px / 16 = 5.625rem */
+}
+
+.first .h3 {
+    font-size: 3.125rem;
+    /* 50px / 16 = 3.125rem */
+    font-weight: bolder;
+}
+
+.first .h4 {
+    font-size: 3.125rem;
+    /* 50px / 16 = 3.125rem */
+    font-weight: bolder;
+    line-height: 4.375rem;
+    /* 70px / 16 = 4.375rem */
+}
+
+.secimg {
+    position: relative;
+}
+
+.secimg img {
+    position: relative;
+    width: 34.6875rem;
+    /* 555px / 16 = 34.6875rem */
+    z-index: 10;
+}
+
+.secimg video {
+    position: absolute;
+    width: 72.4%;
+    /* 72.4% of 555px is approximately 45.25rem */
+    top: 5.3125rem;
+    /* 85px / 16 = 5.3125rem */
+    margin-left: 4.6875rem;
+    /* 75px / 16 = 4.6875rem */
+    z-index: -1;
+}
+
+.third video {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    /* 63% of 555px is approximately 39.38rem */
+    max-height: 47%;
+    /* 47% of 555px is approximately 29.38rem */
+    position: absolute;
+    top: 3.125rem;
+    /* 50px / 16 = 3.125rem */
+    margin-left: 6.25rem;
+    /* 100px / 16 = 6.25rem */
+}
+
+.faq {
+    height: 56.25rem;
+    /* 900px / 16 = 56.25rem */
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 3rem;
+    /* 48px / 16 = 3rem */
+    padding-top: 2.5rem;
+    /* 40px / 16 = 2.5rem */
+}
+
+.faqbox {
+    font-size: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+    padding: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+    width: 75vw;
+    margin: 0.625rem auto;
+    /* 10px / 16 = 0.625rem */
+    cursor: pointer;
+}
+
+.faqbox:hover {
+    background-color: rgb(84, 83, 83);
+}
+
+.box2 {
+    display: flex;
+    padding: 2.125rem;
+    /* 34px / 16 = 2.125rem */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-family: "Netflix Sans";
+    gap: 23px;
+    /* Already in rem */
+    font-size: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+    color: white;
+}
+
+.box2 .h8 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.625rem;
+    /* 10px / 16 = 0.625rem */
+    color: #272727;
+    margin: 4.375rem auto;
+    /* 70px / 16 = 4.375rem */
+    padding: 0 21.875rem 0 9.375rem;
+    /* 350px / 16 = 21.875rem, 150px / 16 = 9.375rem */
+}
+
+a {
+    color: rgb(192, 190, 190);
+}
+
+.btnl {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.3125rem 3.75rem;
+    /* 5px / 16 = 0.3125rem, 60px / 16 = 3.75rem */
+    font-weight: bold;
+    border-radius: 0.25rem;
+    /* 4px / 16 = 0.25rem */
+    background-color: rgb(0, 0, 0);
+    background: transparent;
+    width: 6.25rem;
+    /* 100px / 16 = 6.25rem */
+    border: 1px solid gray;
+    color: white;
+    cursor: pointer;
+}
+
+.column {
+    color: rgb(192, 190, 190);
+    font-size: 0.9375rem;
+    /* 15px / 16 = 0.9375rem */
+    line-height: 2.8125rem;
+    /* 45px / 16 = 2.8125rem */
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        height: 65vh;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80vw;
+        margin: auto;
+        height: 10vh;
+        padding: 0 5%;
+    }
+
+    .box1 {
+        height: calc(100% - 15.75rem);
+        /* 300px / 16 = 18.75rem */
+        display: flex;
+        padding: 2.125rem;
+        /* Already in rem */
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        font-family: "Netflix Sans";
+        gap: 23px;
+        /* Already in rem */
+        color: white;
+        margin-top: 4rem;
+    }
+
+    .first {
+        display: flex;
+        margin: auto 3.125rem;
+        /* 50px / 16 = 3.125rem */
+    }
+
+    .first .h1,
+    .first .h2,
+    .first .h3,
+    .first .h4 {
+        font-size: 2.5rem;
+        /* 40px / 16 = 2.5rem */
+    }
+
+    .secimg video {
+        margin-top: -1rem;
+        margin-left: 3.7rem;
+    }
+
+    .secimg img {
+        width: 28.125rem;
+        /* 450px / 16 = 28.125rem */
+    }
+
+    .third video {
+        max-width: 31.25rem;
+        /* 50% of 555px is approximately 31.25rem */
+        margin-left: 0%;
+        /* 80px / 16 = 5rem */
+    }
+
+    .footer {
+        padding: 0 12.5rem 0 6.25rem;
+        /* 200px / 16 = 12.5rem, 100px / 16 = 6.25rem */
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        margin: 0;
+        width: 100vw;
+    }
+
+    .header {
+        height: 70vh;
+    }
+
+    .sepration {
+        width: 100vw;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80vw;
+        margin: auto;
+        height: 8vh;
+        padding: 0 10%;
+    }
+
+    .box1 {
+        padding: 0 1.875rem;
+        /* 30px / 16 = 1.875rem */
+        height: calc(100% - 11.125rem);
+        /* 50px / 16 = 3.125rem */
+        display: flex;
+        padding: 2.125rem;
+        /* Already in rem */
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        font-family: "Netflix Sans";
+        gap: 23px;
+        /* Already in rem */
+        color: white;
+    }
+
+    .box1 .h0 {
+        font-size: 3rem;
+        /* 48px / 16 = 3rem */
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .box1 :nth-child(2) {
+        /*font-size: 1.5rem; 24px / 16 = 1.5rem */
+        font-weight: 400;
+        /* width: 12rem; */
+    }
+
+    .Sign-button input {
+        width: 30.75rem;
+    }
+
+    .box1 :nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4375rem;
+        /* 23px / 16 = 1.4375rem */
+    }
+
+    .btn-red {
+        font-size: 1.5rem;
+    }
+
+    .first {
+        height: 85vh;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first .h1,
+    .first .h2,
+    .first .h3,
+    .first .h4 {
+        font-size: 2.5rem;
+        /* 40px / 16 = 2.5rem */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .first span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secimg img {
+        width: 37.5rem;
+        /* 600px / 16 = 37.5rem */
+    }
+
+    .secimg video {
+        margin-top: 0.5rem;
+        margin-left: 4.95rem;
+    }
+
+    .third video {
+        max-width: 31.25rem;
+        /* 50% of 555px is approximately 31.25rem */
+        margin-left: 3rem;
+        /* 120px / 16 = 7.5rem */
+    }
+
+    .footer {
+        padding: 0 6.25rem 0 3.125rem;
+        /* 100px / 16 = 6.25rem, 50px / 16 = 3.125rem */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        height: 75vh;
+    }
+
+    .nav {
+        padding: 0 5%;
+    }
+
+    .logo {
+        margin-left: -9%;
+    }
+
+    .button {
+        margin-right: -10%;
+        margin-top: 3%;
+    }
+
+    .first {
+        height: 50vh;
+    }
+
+    .Sign-button input {
+        height: 3.125rem;
+    }
+
+    .Sign-button :nth-child(2) {
+        width: 12.5rem;
+        height: 3.3rem;
+        font-size: 1rem;
+    }
+
+    .first .h1,
+    .first .h2,
+    .first .h3,
+    .first .h4 {
+        font-size: 1.875rem;
+        /* 30px / 16 = 1.875rem */
+    }
+
+    .secimg img {
+        width: 37.5rem;
+        /* 600px / 16 = 37.5rem */
+    }
+
+    .third video {
+        max-width: 31.25rem;
+        /* 50% of 555px is approximately 31.25rem */
+        margin-left: 3rem;
+        /* 175px / 16 = 10.9375rem */
+    }
+
+    .faq {
+        height: 58.25rem;
+    }
+
+    .footer {
+        padding: 0 2.25rem 0 2.25rem;
+        /* 50px / 16 = 3.125rem, 20px / 16 = 1.25rem */
+    }
+
+    .first {
+        height: 45rem;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .header {
+        height: 90vh;
+        background-size: cover;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .logo {
+        width: 7rem;
+        margin-left: -5%;
+    }
+
+    .box1 {
+        padding: 0 1.875rem;
+        /* 30px / 16 = 1.875rem */
+        height: calc(100% - 9.5rem);
+        /* 200px / 16 = 12.5rem */
+        display: flex;
+        padding: 2.125rem;
+        /* Already in rem */
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        font-family: "Netflix Sans";
+        gap: 23px;
+        /* Already in rem */
+        color: white;
+        margin-top: 2rem;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .box1 .h0 {
+        font-size: 2.5rem;
+        /* 30px / 16 = 1.875rem */
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .box1 .div :nth-child(2) {
+        font-size: 1.1rem;
+        /* 24px / 16 = 1.5rem */
+        font-weight: 400;
+    }
+
+    .box1 :nth-child(3) {
+        font-weight: 400;
+        font-size: 1.1rem;
+        /* 23px / 16 = 1.4375rem */
+    }
+
+    .Sign-button {
+        line-height: 2.5rem;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        height: 3.4375rem;
+        /* 55px / 16 = 3.4375rem */
+        margin-left: -1rem;
+    }
+
+    .Sign-button input {
+        color: white;
+        border-radius: 0.3125rem;
+        /* 5px / 16 = 0.3125rem */
+        border: 1px solid rgb(88, 87, 87);
+        cursor: pointer;
+        background: rgba(14, 14, 14, 0.7);
+        width: 21.5rem;
+        /* 380px / 16 = 23.75rem */
+        text-align: center;
+        padding-left: 0.125rem;
+        /* 15px / 16 = 0.9375rem */
+        padding-bottom: 0.625rem;
+        /* 10px / 16 = 0.625rem */
+        font-weight: 400;
+        font-size: 1.8rem;
+        /* 30px / 16 = 1.875rem */
+        height: 2rem;
+    }
+
+    input::placeholder {
+        color: #c3c0c0;
+        text-overflow: hidden;
+        /* 30px / 16 = 1.875rem */
+        font-size: 1rem;
+    }
+
+    .btn {
+        margin-top: 2.18rem;
+        margin-left: 9.5rem;
+        /* 15px / 16 = 0.9375rem */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3125rem 2.5rem;
+        /* 5px / 16 = 0.3125rem, 50px / 16 = 3.125rem */
+        font-weight: bold;
+        border-radius: 0.25rem;
+        /* 4px / 16 = 0.25rem */
+        color: white;
+        background-color: rgb(0, 0, 0);
+        background: transparent;
+        width: 3.125rem;
+        /* 50px / 16 = 3.125rem */
+        border: 1px solid gray;
+    }
+
+    .Sign-button :nth-child(2) {
+        height: 2.5rem;
+        width: 12rem;
+        font-size: 1rem;
+    }
+
+    .btn-red-sn {
+        margin-left: 9.5rem;
+        color: white;
+        border-radius: 0.25rem;
+        /* 4px / 16 = 0.25rem */
+        padding: 0.3125rem;
+        /* 5px / 16 = 0.3125rem */
+        width: 5.2rem;
+        /* 80px / 16 = 5rem */
+        background-color: rgb(250, 4, 4);
+        border-color: red(250, 4, 4);
+    }
+
+    .first {
+        max-width: 100vw;
+        height: 32.5rem;
+        /* 500px / 16 = 31.25rem */
+        padding: 2.125rem 0;
+        margin: auto;
+        color: white;
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .first span {
+        font-size: 1rem;
+        margin: 0 2rem;
+    }
+
+    .secimg img {
+        width: 25rem;
+    }
+
+    .sepration {
+        height: 0.20rem;
+    }
+
+    .secimg video {
+        width: 72.4%;
+        margin-left: 3.37rem;
+        margin-top: -1.37rem;
+    }
+
+    .third video {
+        margin-left: 3.37rem;
+    }
+
+    .faq {
+        height: 55rem;
+    }
+
+    .faqbox {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .faq h2 {
+        font-size: 2.5rem;
+    }
+
+    .column {
+        width: 5rem;
+        margin-left: 0.7rem;
+    }
+}
