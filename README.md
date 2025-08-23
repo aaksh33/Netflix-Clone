@@ -33,4 +33,5 @@ netflix-clone/
 ├── script.js
 └── /images
 
-![netflixclone](https://github.com/aaksh33/Netflix-Clone/blob/main/netflixclone.png)
+![netflixclone](https://raw.githubusercontent.com/aaksh33/Netflix-Clone/main/netflixclone.png)
+
